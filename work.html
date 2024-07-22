@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autentifikatsiya</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="auth-sahifa" class="box1">
+            <h1>Autentifikatsiya</h1>
+            <button onclick="loginSahifasiniKorsat()">Kirish</button>
+        </div>
+    
+        <div id="login-sahifa" style="display: none;" class="box1">
+            <h2>Kirish</h2>
+            <form onsubmit="loginTasdiqlash(event)" class="form">
+                <label for="login-login">Login:</label>
+                <input type="text" id="login-login" required><br><br>
+                <label for="login-parol">Parol:</label>
+                <input type="password" id="login-parol" required><br><br>
+                <button type="submit">Kirish</button>
+            </form>
+        </div>
+    
+        <div id="admin-sahifa" style="display: none;" class="box1">
+            <h2>Admin xush kelibsiz</h2>
+            <div id="admin-forma">
+                <form onsubmit="formaniJonatish(event)" class="form1 form"> 
+                    <label for="input1">Name:</label>
+                    <input type="text" id="input1" required><br><br>
+                    <label for="input2">Address:</label>
+                    <input type="text" id="input2" required><br><br>
+                    <label for="input3">Phone:</label>
+                    <input type="number" id="input3" required><br><br>
+                    <button type="submit">Jo'natish</button>
+                </form>
+            </div>
+            
+            <div id="data-table" class="box3">
+                <h3>Kiritilgan Malumotlar</h3>
+                <table id="malumotlar-table" border="2">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="./work.js"></script>
+</body>
+</html>
